@@ -1,0 +1,1548 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Consupercont | Contabilidade e Assessoria Superior</title>
+
+    <meta name="description"
+          content="Consupercont - Contabilidade e Assessoria Superior LTDA. Serviços contábeis, fiscais, trabalhistas e assessoria para empresas em Aracaju - Sergipe.">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0b3d5c;
+            --primary-dark: #062b41;
+            --secondary: #13a6a6;
+            --accent: #f2b84b;
+            --light: #f5f8fa;
+            --dark: #14212b;
+            --text: #5c6973;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            padding: 18px 0;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 20px rgba(0,0,0,.05);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.45rem;
+            color: var(--primary) !important;
+        }
+
+        .navbar-brand span {
+            color: var(--secondary);
+        }
+
+        .nav-link {
+            color: #33434f !important;
+            font-weight: 500;
+            margin-left: 18px;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary) !important;
+        }
+
+        .btn-main {
+            background: var(--secondary);
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 12px 22px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        .btn-main:hover {
+            background: #0c8585;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-main {
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            font-weight: 600;
+            padding: 11px 22px;
+            border-radius: 8px;
+        }
+
+        .btn-outline-main:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 700px;
+            padding: 120px 0 100px;
+            background:
+                linear-gradient(110deg, rgba(6,43,65,.97), rgba(11,61,92,.92)),
+                url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.2);
+            padding: 8px 14px;
+            border-radius: 50px;
+            font-size: .85rem;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.08;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #55d7d7;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,.78);
+            max-width: 650px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+        }
+
+        .hero-buttons .btn {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .hero-info {
+            margin-top: 50px;
+            display: flex;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        .hero-info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-info-item i {
+            color: #55d7d7;
+            font-size: 1.5rem;
+        }
+
+        .hero-info-item strong {
+            display: block;
+            font-size: 1.05rem;
+        }
+
+        .hero-info-item small {
+            color: rgba(255,255,255,.6);
+        }
+
+        /* SECTION */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-light {
+            background: var(--light);
+        }
+
+        .section-title {
+            max-width: 700px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .section-title .small-title {
+            color: var(--secondary);
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .section-title p {
+            color: var(--text);
+            line-height: 1.8;
+            margin-top: 15px;
+        }
+
+        /* SERVICES */
+        .service-card {
+            height: 100%;
+            padding: 35px 30px;
+            border: 1px solid #e7edf0;
+            border-radius: 16px;
+            background: white;
+            transition: .35s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(8,55,80,.12);
+            border-color: transparent;
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 14px;
+            background: rgba(19,166,166,.1);
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        .service-card h4 {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .service-card p {
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* ABOUT */
+        .about-image {
+            border-radius: 20px;
+            width: 100%;
+            min-height: 500px;
+            object-fit: cover;
+            box-shadow: 0 25px 60px rgba(0,0,0,.12);
+        }
+
+        .about-content h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .check-list {
+            padding: 0;
+            margin: 30px 0;
+            list-style: none;
+        }
+
+        .check-list li {
+            margin-bottom: 15px;
+            color: #3e4c55;
+        }
+
+        .check-list i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        /* NUMBERS */
+        .numbers {
+            background: var(--primary);
+            color: white;
+        }
+
+        .number-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .number-box i {
+            color: #55d7d7;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .number-box h3 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .number-box p {
+            color: rgba(255,255,255,.65);
+            margin: 0;
+        }
+
+        /* DIFFERENTIALS */
+        .feature-box {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .feature-icon {
+            min-width: 52px;
+            height: 52px;
+            background: var(--primary);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .feature-box h5 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .feature-box p {
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* COMPANY INFO */
+        .info-card {
+            background: white;
+            border: 1px solid #e5ebef;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .info-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px 25px;
+            font-weight: 700;
+        }
+
+        .info-body {
+            padding: 25px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 13px 0;
+            border-bottom: 1px solid #edf0f2;
+        }
+
+        .info-row:last-child {
+            border-bottom: 0;
+        }
+
+        .info-row span:first-child {
+            color: #7a858d;
+        }
+
+        .info-row span:last-child {
+            text-align: right;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* CONTACT */
+        .contact-box {
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            padding: 55px;
+        }
+
+        .contact-box h2 {
+            font-weight: 800;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #55d7d7;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .contact-item span,
+        .contact-item a {
+            color: rgba(255,255,255,.7);
+        }
+
+        .map-box {
+            height: 100%;
+            min-height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #dce6ea;
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border: 0;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 90px 0;
+            background:
+                linear-gradient(110deg, #0b3d5c, #0c777b);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 15px auto 30px;
+            color: rgba(255,255,255,.75);
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #061f2e;
+            color: white;
+            padding: 60px 0 25px;
+        }
+
+        .footer-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand span {
+            color: #55d7d7;
+        }
+
+        footer p {
+            color: rgba(255,255,255,.55);
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,.55);
+            transition: .2s;
+        }
+
+        .footer-links a:hover {
+            color: #55d7d7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.08);
+            margin-top: 45px;
+            padding-top: 25px;
+            color: rgba(255,255,255,.45);
+            font-size: .9rem;
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 58px;
+            height: 58px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,.2);
+            z-index: 1000;
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .hero {
+                min-height: auto;
+                padding: 120px 0 80px;
+            }
+
+            .about-image {
+                min-height: 350px;
+                margin-bottom: 40px;
+            }
+
+            .contact-box {
+                padding: 35px 25px;
+            }
+
+            .map-box {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            CONS<span>UPER</span>CONT
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                    <a class="btn btn-main"
+                       href="tel:+557932247472">
+                        <i class="bi bi-telephone me-2"></i>
+                        Fale Conosco
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero" id="inicio">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-9">
+
+                <div class="hero-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    Contabilidade e Assessoria Superior
+                </div>
+
+                <h1>
+                    Soluções contábeis para
+                    <span>simplificar</span>
+                    o seu negócio.
+                </h1>
+
+                <p>
+                    A Consupercont oferece serviços de contabilidade e
+                    assessoria para empresas que buscam organização,
+                    segurança e eficiência na gestão de seus negócios.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#contato" class="btn btn-main btn-lg">
+                        Solicite Atendimento
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="#servicos"
+                       class="btn btn-outline-light btn-lg">
+                        Conheça nossos serviços
+                    </a>
+
+                </div>
+
+                <div class="hero-info">
+
+                    <div class="hero-info-item">
+                        <i class="bi bi-calendar-check"></i>
+                        <div>
+                            <strong>Desde 2005</strong>
+                            <small>Experiência no mercado</small>
+                        </div>
+                    </div>
+
+                    <div class="hero-info-item">
+                        <i class="bi bi-shield-check"></i>
+                        <div>
+                            <strong>Empresa Ativa</strong>
+                            <small>Registro regular</small>
+                        </div>
+                    </div>
+
+                    <div class="hero-info-item">
+                        <i class="bi bi-geo-alt"></i>
+                        <div>
+                            <strong>Aracaju - SE</strong>
+                            <small>Atendimento profissional</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
+<section class="section section-light" id="servicos">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                Nossos serviços
+            </div>
+
+            <h2>
+                Atividades de contabilidade
+            </h2>
+
+            <p>
+                Soluções contábeis e administrativas pensadas para
+                ajudar sua empresa a manter suas obrigações organizadas
+                e sua gestão mais eficiente.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Contabilidade</h4>
+
+                    <p>
+                        Escrituração e acompanhamento contábil para
+                        manter as informações financeiras da empresa
+                        organizadas e atualizadas.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h4>Obrigações Fiscais</h4>
+
+                    <p>
+                        Apoio no controle das obrigações fiscais e
+                        tributárias, contribuindo para uma gestão
+                        organizada e responsável.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h4>Departamento Pessoal</h4>
+
+                    <p>
+                        Suporte às rotinas relacionadas aos colaboradores,
+                        folha de pagamento e demais processos trabalhistas.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+
+                    <h4>Assessoria Contábil</h4>
+
+                    <p>
+                        Orientação contábil para apoiar empresários na
+                        organização e acompanhamento das atividades
+                        da empresa.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Gestão Financeira</h4>
+
+                    <p>
+                        Informações e suporte para facilitar o controle
+                        financeiro e contribuir para decisões mais
+                        organizadas.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-building-check"></i>
+                    </div>
+
+                    <h4>Suporte Empresarial</h4>
+
+                    <p>
+                        Atendimento próximo para auxiliar empresas
+                        em suas necessidades contábeis e administrativas.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NÚMEROS
+========================= -->
+<section class="section numbers">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3">
+                <div class="number-box">
+                    <i class="bi bi-calendar3"></i>
+                    <h3>2005</h3>
+                    <p>Ano de fundação</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="number-box">
+                    <i class="bi bi-award"></i>
+                    <h3>20+</h3>
+                    <p>Anos de experiência</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="number-box">
+                    <i class="bi bi-geo-alt"></i>
+                    <h3>SE</h3>
+                    <p>Atuação em Sergipe</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="number-box">
+                    <i class="bi bi-check-circle"></i>
+                    <h3>Ativa</h3>
+                    <p>Situação cadastral</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+<section class="section" id="sobre">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=80"
+                    alt="Equipe trabalhando em escritório"
+                    class="about-image">
+
+            </div>
+
+
+            <div class="col-lg-6 about-content">
+
+                <div class="section-title text-start mb-4"
+                     style="margin-left:0">
+
+                    <div class="small-title">
+                        Sobre a Consupercont
+                    </div>
+
+                    <h2>
+                        Experiência e compromisso com sua empresa
+                    </h2>
+
+                </div>
+
+                <p>
+                    A Consupercont - Contabilidade e Assessoria Superior LTDA
+                    atua no segmento de contabilidade desde 29 de dezembro
+                    de 2005.
+                </p>
+
+                <p>
+                    Localizada em Aracaju, Sergipe, a empresa tem como
+                    atividade principal as atividades de contabilidade,
+                    oferecendo suporte para empresas que precisam de
+                    organização e acompanhamento contábil.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Atendimento profissional
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Experiência no mercado desde 2005
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Empresa com situação cadastral ativa
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Registro profissional no CRC de Sergipe
+                    </li>
+
+                </ul>
+
+                <a href="#contato" class="btn btn-main">
+                    Entre em contato
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DIFERENCIAIS
+========================= -->
+<section class="section section-light">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-5 mb-5 mb-lg-0">
+
+                <div class="section-title text-start mb-4"
+                     style="margin-left:0">
+
+                    <div class="small-title">
+                        Por que escolher
+                    </div>
+
+                    <h2>
+                        Contabilidade que entende sua empresa
+                    </h2>
+
+                    <p>
+                        Mais organização, informação e acompanhamento
+                        para você dedicar mais tempo ao crescimento
+                        do seu negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="feature-box">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <div>
+                        <h5>Segurança e organização</h5>
+                        <p>
+                            Informações contábeis organizadas para
+                            facilitar o acompanhamento da empresa.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature-box">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+
+                    <div>
+                        <h5>Atendimento próximo</h5>
+                        <p>
+                            Comunicação clara para ajudar você a
+                            compreender melhor as informações do seu negócio.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature-box">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+
+                    <div>
+                        <h5>Informação para decisões</h5>
+                        <p>
+                            Dados contábeis podem ajudar o empresário
+                            a acompanhar a realidade financeira da empresa.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature-box">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+
+                    <div>
+                        <h5>Experiência</h5>
+                        <p>
+                            Mais de duas décadas de atuação no segmento
+                            de contabilidade.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DADOS DA EMPRESA
+========================= -->
+<section class="section" id="empresa">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                Informações empresariais
+            </div>
+
+            <h2>
+                Dados da Consupercont
+            </h2>
+
+            <p>
+                Informações cadastrais e institucionais da empresa.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="info-card">
+
+                    <div class="info-header">
+                        <i class="bi bi-building me-2"></i>
+                        Informações de Registro
+                    </div>
+
+                    <div class="info-body">
+
+                        <div class="info-row">
+                            <span>CNPJ</span>
+                            <span>07.770.608/0001-44</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Razão Social</span>
+                            <span>Consupercont - Contabilidade e Assessoria Superior LTDA</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Nome Fantasia</span>
+                            <span>Consupercont</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Fundação</span>
+                            <span>29/12/2005</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Porte</span>
+                            <span>Micro Empresa</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Natureza Jurídica</span>
+                            <span>Sociedade Empresária Limitada</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Capital Social</span>
+                            <span>R$ 30.000,00</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="info-card">
+
+                    <div class="info-header">
+                        <i class="bi bi-file-earmark-check me-2"></i>
+                        Situação e Atividade
+                    </div>
+
+                    <div class="info-body">
+
+                        <div class="info-row">
+                            <span>Situação</span>
+                            <span class="text-success">Ativa</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Tipo</span>
+                            <span>Matriz</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Optante pelo MEI</span>
+                            <span>Não</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Optante pelo Simples</span>
+                            <span>Sim</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Data do Simples</span>
+                            <span>01/01/2009</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>CRC</span>
+                            <span>SE-000225/O</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>CNAE Principal</span>
+                            <span>69.20-6-01</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row mt-4">
+
+            <div class="col-12">
+
+                <div class="info-card">
+
+                    <div class="info-header">
+                        <i class="bi bi-person-badge me-2"></i>
+                        Quadro de Sócios e Administradores
+                    </div>
+
+                    <div class="info-body">
+
+                        <div class="info-row">
+                            <span>Sócio-Administrador</span>
+                            <span>Alexsandra Rodrigues Santos Silva</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Qualificação</span>
+                            <span>Sócio-Administrador</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Atividade Principal</span>
+                            <span>69.20-6-01 - Atividades de contabilidade</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+<section class="section section-light" id="contato">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <div class="contact-box h-100">
+
+                    <h2>
+                        Vamos conversar?
+                    </h2>
+
+                    <p class="mt-3"
+                       style="color:rgba(255,255,255,.7);">
+                        Entre em contato com a Consupercont para
+                        conhecer nossos serviços e encontrar soluções
+                        para as necessidades contábeis da sua empresa.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <div>
+                            <strong>Telefone</strong>
+
+                            <a href="tel:+557932247472">
+                                (79) 3224-7472
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <div>
+                            <strong>E-mail</strong>
+
+                            <a href="mailto:nailcecunha@novadvocaci.site">
+                                nailcecunha@novadvocaci.site
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <div>
+                            <strong>Endereço</strong>
+
+                            <span>
+                                Travessa São Francisco, 90<br>
+                                Pereira Lobo<br>
+                                Aracaju - SE<br>
+                                CEP 49050-840
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Travessa+Sao+Francisco,+90,+Pereira+Lobo,+Aracaju,+SE"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-light mt-2">
+
+                        <i class="bi bi-map me-2"></i>
+                        Ver localização no mapa
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="map-box">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Travessa%20Sao%20Francisco%2090%2C%20Pereira%20Lobo%2C%20Aracaju%2C%20SE&output=embed"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+<section class="cta">
+
+    <div class="container">
+
+        <i class="bi bi-calculator"
+           style="font-size:3rem;color:#55d7d7;"></i>
+
+        <h2 class="mt-3">
+            Sua empresa merece uma contabilidade organizada.
+        </h2>
+
+        <p>
+            Conte com a Consupercont para acompanhar suas necessidades
+            contábeis e contribuir para uma gestão empresarial mais
+            organizada.
+        </p>
+
+        <a href="tel:+557932247472"
+           class="btn btn-light btn-lg px-4">
+
+            <i class="bi bi-telephone me-2"></i>
+            Fale com a Consupercont
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+                    CONS<span>UPER</span>CONT
+                </div>
+
+                <p>
+                    Consupercont - Contabilidade e Assessoria Superior LTDA.
+                    Soluções contábeis para empresas que buscam organização,
+                    segurança e eficiência.
+                </p>
+
+                <p>
+                    <strong>CNPJ:</strong> 07.770.608/0001-44
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <div class="footer-title">
+                    Navegação
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#inicio">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="#servicos">Serviços</a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre">Sobre nós</a>
+                    </li>
+
+                    <li>
+                        <a href="#empresa">Empresa</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-4">
+
+                <div class="footer-title">
+                    Contato
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <i class="bi bi-telephone me-2"></i>
+                        <a href="tel:+557932247472">
+                            (79) 3224-7472
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-envelope me-2"></i>
+                        <a href="mailto:nailcecunha@novadvocaci.site">
+                            nailcecunha@novadvocaci.site
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-geo-alt me-2"></i>
+                        Travessa São Francisco, 90
+                    </li>
+
+                    <li>
+                        Pereira Lobo - Aracaju/SE
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom text-center">
+
+            © 2026 Consupercont - Contabilidade e Assessoria Superior LTDA.
+            Todos os direitos reservados.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+<a
+    href="https://wa.me/557932247472"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp"
+    aria-label="Falar pelo WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+
+
+<!-- Bootstrap JS -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
+```
